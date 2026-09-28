@@ -42,7 +42,7 @@ position when evaluated to 4x the training length.
 ## Installation
 
 ```bash
-git clone https://github.com/Atom-101/dual_mod_public && cd dual_mod_public
+git clone <this repository> dual_mod && cd dual_mod
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt            # torch 2.12.1 + triton 3.7.1 (CUDA 13), lm-eval 0.4.12, ...
 export PYTHONPATH=$PWD                     # every script is run from the repository root
@@ -232,13 +232,3 @@ sample-100BT from the Hugging Face hub; the tokenizers are the Mistral-32k and L
 `data/mistral32k_tok` and `data/llama2_tok`). The formal-language tasks are generated on the fly from the seed.
 The result JSONs and FINAL lines behind every figure ship in `figures/data/`. Model checkpoints (the 1.3B DM
 runs, the keyed-A5 and CVP solver lineages) are not in this repository; they will be linked here when hosted.
-
-## Citation
-
-```bibtex
-@article{banerjee2026dualmod,
-  title   = {Dual-Mod Attention: Recurrent Cache as an Exact Superset of the Transformer},
-  author  = {Banerjee, Atmadeep and others},
-  year    = {2026}
-}
-```
