@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.venv*/
+out/
+data/
+external/
+analysis/
+wandb/
+*.pt
+*.bin
+*.npz
+.hf_cache/
+.pytest_cache/
+data

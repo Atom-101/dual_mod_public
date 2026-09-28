@@ -1,0 +1,20 @@
+# Social IQa from the Hub's parquet conversion (the upstream task points at a dataset SCRIPT,
+# unsupported by datasets>=4). Identical prompt/metric to lm-eval's built-in `social_iqa`.
+task: social_iqa_pq
+dataset_path: allenai/social_i_qa
+dataset_name: null
+dataset_kwargs:
+  revision: refs/convert/parquet
+output_type: multiple_choice
+training_split: train
+validation_split: validation
+doc_to_text: "Q: {{context}} {{question}}\nA:"
+target_delimiter: " "
+doc_to_choice: "{{[answerA, answerB, answerC]}}"
+doc_to_target: "{{ (label|int) - 1 }}"
+metric_list:
+  - metric: acc
+    aggregation: mean
+    higher_is_better: true
+metadata:
+  version: 0.0

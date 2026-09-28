@@ -1,0 +1,26 @@
+# core (model + engines + formal-language harness)
+torch==2.12.1
+triton==3.7.1
+numpy>=2.5.0
+tqdm>=4.68.3
+# LM pipelines + eval battery
+transformers>=5.13.0
+datasets>=5.0.0
+pyarrow>=24.0.0
+huggingface-hub>=1.0
+tiktoken>=0.13.0
+lm-eval==0.4.12
+wonderwords==3.0.1
+nltk>=3.10
+httpx
+html2text
+beautifulsoup4
+einops>=0.8
+wandb>=0.28.0
+# figures / tests
+matplotlib>=3.11.0
+pillow
+pytest>=9.1.1
+# 1.3B engine (Blackwell / CUDA 13): the cuDNN-frontend SDPA path in engines/wave3d/wave3d_attn.py
+# nvidia-cudnn-frontend==1.28.0
+# Gated DeltaNet arms: see the [gdn] extra in pyproject.toml (separate environment)

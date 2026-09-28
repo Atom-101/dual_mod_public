@@ -1,0 +1,2 @@
+task: jrt_triviaqa
+class: !function jrt_tasks.JRTTriviaQA
